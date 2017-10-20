@@ -348,7 +348,7 @@ class FxPlugin(BasePlugin, ThreadJob):
         return self.config.get("currency", "EUR")
 
     def config_exchange(self):
-        return self.config.get('use_exchange', 'cryptapus')
+        return self.config.get('use_exchange', 'Coinmarketcap')
 
     def show_history(self):
         return self.ccy in self.exchange.history_ccys()

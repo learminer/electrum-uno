@@ -470,12 +470,12 @@ class ElectrumWindow(QMainWindow, MessageBoxMixin, PrintError):
 
     def show_about(self):
         QMessageBox.about(self, "Unobtanium Electrum",
-            _("Version")+" %s" % (self.wallet.electrum_version) + "\n\n" + _("Unobtanium Electrum's focus is speed, with low resource usage and simplifying Unobtanium. You do not need to perform regular backups, because your wallet can be recovered from a secret phrase that you can memorize or write on paper. Startup times are instant because it operates in conjunction with high-performance servers that handle the most complicated parts of the Unobtanium system.") + "\n\n" + _("Thank you to the Bitcoin Electrum team at https://electrum.org for their continued development of Electrum for Bitcoin.") + "\n\n" + _("Unobtanium Electrum has been altered from Bitcoin Electrum by cryptapus. Donation are welcome (UNO): ucrYPTxQPKkb2WTU57PjurHbCHf3rACMJh"))
+            _("Version")+" %s" % (self.wallet.electrum_version) + "\n\n" + _("Unobtanium Electrum's focus is speed, with low resource usage and simplifying Unobtanium. You do not need to perform regular backups, because your wallet can be recovered from a secret phrase that you can memorize or write on paper. Startup times are instant because it operates in conjunction with high-performance servers that handle the most complicated parts of the Unobtanium system.") + "\n\n" + _("Thank you to the Bitcoin Electrum team at https://electrum.org for their continued development of Electrum for Bitcoin.") + "\n\n" + _("Unobtanium Electrum has been altered from Bitcoin Electrum by cryptapus and learminer. Donations are welcome (UNO): uewrE9QWc54EXjCZehWDPkjqgsyRDpQmK8"))
 
     def show_report_bug(self):
         msg = ' '.join([
             _("Please report any bugs as issues on github:<br/>"),
-            "<a href=\"https://github.com/cryptapus/electrum-uno/issues\">https://github.com/cryptapus/electrum-uno/issues</a><br/><br/>",
+            "<a href=\"https://github.com/learminer/electrum-uno/issues\">https://github.com/learminer/electrum-uno/issues</a><br/><br/>",
             _("Before reporting a bug, upgrade to the most recent version of Unobtanium Electrum (latest release or git HEAD), and include the version number in your report."),
             _("Try to explain not only what the bug is, but how it occurs.")
          ])
