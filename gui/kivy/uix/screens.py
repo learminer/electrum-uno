@@ -188,7 +188,7 @@ class SendScreen(CScreen):
         try:
             uri = electrum.util.parse_URI(text, self.app.on_pr)
         except:
-            self.app.show_info(_("Not a Bitcoin URI"))
+            self.app.show_info(_("Not a Unobtanium URI"))
             return
         amount = uri.get('amount')
         self.screen.address = uri.get('address', '')
@@ -258,10 +258,10 @@ class SendScreen(CScreen):
         else:
             address = str(self.screen.address)
             if not address:
-                self.app.show_error(_('Recipient not specified.') + ' ' + _('Please scan a Bitcoin address or a payment request'))
+                self.app.show_error(_('Recipient not specified.') + ' ' + _('Please scan a Unobtanium address or a payment request'))
                 return
             if not bitcoin.is_address(address):
-                self.app.show_error(_('Invalid Bitcoin Address') + ':\n' + address)
+                self.app.show_error(_('Invalid Unobtanium Address') + ':\n' + address)
                 return
             try:
                 amount = self.app.get_amount(self.screen.amount)
@@ -372,7 +372,7 @@ class ReceiveScreen(CScreen):
         sendIntent.putExtra(Intent.EXTRA_TEXT, JS(uri))
         PythonActivity = autoclass('org.renpy.android.PythonActivity')
         currentActivity = cast('android.app.Activity', PythonActivity.mActivity)
-        it = Intent.createChooser(sendIntent, cast('java.lang.CharSequence', JS("Share Bitcoin Request")))
+        it = Intent.createChooser(sendIntent, cast('java.lang.CharSequence', JS("Share Unobtanium Request")))
         currentActivity.startActivity(it)
 
     def do_copy(self):
