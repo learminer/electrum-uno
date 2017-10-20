@@ -6,6 +6,7 @@ dist/
 *.egg/
 /electrum.py
 contrib/pyinstaller/
+contrib/build-wine/
 Electrum.egg-info/
 gui/qt/icons_rc.py
 locale/
@@ -16,3 +17,4 @@ env/
 .tox/
 .buildozer/
 bin/
+Electrum_uno.egg-info/
